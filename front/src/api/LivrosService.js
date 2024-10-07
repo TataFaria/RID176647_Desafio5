@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5174"
+const BASE_URL = "http://localhost:5173"
 
 export class LivrosService{
     static getLivros(){

@@ -8,7 +8,7 @@ const cors = require('cors')
 app.use(cors())
 app.use(express.json())
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5173;
 
 app.get('/livros', async (req, res) => {
   const livros = await livroModel.find({})
@@ -43,6 +43,6 @@ app.delete('/livros/:id', async (req, res) => {
   return res.status(200).json(livro)
 })
 
-app.listen(5174, () => {
+app.listen(5173, () => {
     console.log('Servidor operacional!')
 })

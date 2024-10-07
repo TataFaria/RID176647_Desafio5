@@ -1,5 +1,5 @@
 const mongoose = require ('mongoose')
-const conn = require('../../config/mongo.cjs')
+const conn = require('../config/mongo.cjs')
 
 conn()
 
