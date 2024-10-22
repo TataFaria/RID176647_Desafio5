@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const app = express()
 const livroModel = require('./src/model/livro.cjs')
 const cors = require('cors')
+require("dotenv").config();
 
 
 app.use(cors())
