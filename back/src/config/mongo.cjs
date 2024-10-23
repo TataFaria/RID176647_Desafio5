@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require ('mongoose')
 
 
 let conn
@@ -11,4 +11,4 @@ const connection = () => {
     conn = mongoose.connect('mongodb://localhost:27017')
 }
 
-module.exports = connection
+module.exports = connection 

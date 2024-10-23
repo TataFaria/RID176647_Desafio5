@@ -1,4 +1,8 @@
 const mongoose = require ('mongoose')
+const conn = require('../config/mongo.cjs')
+require("dotenv").config();
+
+conn()
 
 const livroSchema = mongoose.Schema({
     id: Number,
