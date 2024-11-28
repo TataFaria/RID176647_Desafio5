@@ -8,7 +8,7 @@ const connection = () => {
         return conn
     }
     
-    conn = mongoose.connect('mongodb://localhost:27017')
+    conn = mongoose.connect('mongodb://localhost:27017/livros')
 }
 
 module.exports = connection 

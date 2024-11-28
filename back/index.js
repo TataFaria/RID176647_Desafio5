@@ -1,15 +1,13 @@
 const express = require('express')
-const mongoose = require('mongoose')
-const app = express()
 const livroModel = require('./src/model/livro.js')
 const cors = require('cors')
 require("dotenv").config();
 
-
+const app = express()
 app.use(cors())
 app.use(express.json())
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 app.get('/livros', async (req, res) => {
   const livros = await livroModel.find({})
@@ -31,7 +29,7 @@ app.post('/livros/cadastro', async (req, res) => {
 })
 
 app.get('/livros/edicao/:id', async (req, res) => {
-  const livro = await livroModel.findOne({ id: Number (req.params.id)})
+  const livro = await livroModel.findOne({id:Number (req.params.id)})
   return res.status(200).json(livro)
 })
 
@@ -45,7 +43,7 @@ app.delete('/livros/:id', async (req, res) => {
   return res.status(200).json(livro)
 })
 
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log('Servidor operacional!')
 })
 
